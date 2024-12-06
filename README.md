@@ -33,7 +33,7 @@ El sistema utiliza una base de datos relacional con las siguientes tablas princi
 ### Tabla: Plants
 
 | **Field**       | **Type**     |**Null** | **Key** | **Default** | **Extra**      |
-+-----------------+--------------+---------+---------+-------------+----------------+
+|-----------------|--------------|---------|---------|-------------|----------------|
 | id              | int          | NO      | PRI     | NULL        | auto_increment |
 | location_id     | int          | NO      | MUL     | NULL        |                |
 | current_name    | varchar(100) | YES     |         | NULL        |                |
@@ -44,8 +44,8 @@ El sistema utiliza una base de datos relacional con las siguientes tablas princi
 ### Tabla: locations
 
 
-| **Field**   | **Type**     | **Null** | **Key** | **Default** | **Extra**       |
-+-------------+--------------+----------+---------+-------------+----------------+
+| **Field**   | **Type**     | **Null** | **Key** | **Default** | **Extra**      |
+|-------------|--------------|----------|---------|-------------|----------------|
 | id          | int          | NO       | PRI     | NULL        | auto_increment |
 | city_name   | varchar(100) | YES      |         | NULL        |                |
 | id_province | int          | YES      |         | NULL        |                |
@@ -55,7 +55,7 @@ El sistema utiliza una base de datos relacional con las siguientes tablas princi
 ### Tabla: Images
 
 | **Field**| **Type**     | **Null** | **Key** | **Default** | **Extra**       |
-+----------+--------------+----------+---------+-------------+-----------------+
+|----------|--------------|----------|---------|-------------|-----------------|
 | id       | int          | NO       | PRI     | NULL        | auto_increment  |
 | plant_id | int          | NO       | MUL     | NULL        |                 |
 | date     | date         | NO       |         | NULL        |                 |
@@ -66,7 +66,7 @@ El sistema utiliza una base de datos relacional con las siguientes tablas princi
 ### Tabla: Uses
 
 | **Field**   | **Type**     | **Null** | **Key** | **Default** | **Extra**      |
-+-------------+--------------+----------+---------+-------------+----------------+
+|-------------|--------------|----------|---------|-------------|----------------|
 | id          | int          | NO       | PRI     | NULL        | auto_increment |
 | id_plant    | int          | NO       | MUL     | NULL        |                |
 | description | varchar(255) | NO       |         | NULL        |                |
@@ -78,7 +78,7 @@ El sistema utiliza una base de datos relacional con las siguientes tablas princi
 ### Tabla: Previous_researches
 
 | **Field**| **Type**     |**Null** | **Key** | **Default** | **Extra**      |
-+----------+--------------+---------+---------+-------------+----------------+
+|----------|--------------|---------|---------|-------------|----------------|
 | id       | int          | NO      | PRI     | NULL        | auto_increment |
 | id_plant | int          | NO      | MUL     | NULL        |                |
 | title    | varchar(255) | NO      |         | NULL        |                |
@@ -89,7 +89,7 @@ El sistema utiliza una base de datos relacional con las siguientes tablas princi
 ### Tabla: Toponimos
 
 | **Field**              | **Type**     | **Null** | **Key** | **Default** | **Extra**      |
-+------------------------+--------------+----------+---------+-------------+----------------+
+|------------------------|--------------|----------|---------|-------------|----------------|
 | id                     | int          | NO       | PRI     | NULL        | auto_increment |
 | id_plant               | int          | NO       | MUL     | NULL        |                |
 | origin                 | varchar(255) | NO       |         | NULL        |                |
@@ -100,8 +100,8 @@ El sistema utiliza una base de datos relacional con las siguientes tablas princi
 
 ### Tabla: Interview_customers
 
-| **Field**    | **Type**    | **Null** | **Key** | **Default** | **Extra**      |
-+-------------+--------------+----------+---------+-------------+----------------+
+| **Field**   |  **Type**    | **Null** | **Key** | **Default** | **Extra**      |
+|-------------|--------------|----------|---------|-------------|----------------|
 | id          | int          | NO       | PRI     | NULL        | auto_increment |
 | id_location | int          | NO       | MUL     | NULL        |                |
 | link        | varchar(500) | NO       |         | NULL        |                |
@@ -134,7 +134,7 @@ El sistema utiliza una base de datos relacional con las siguientes tablas princi
 ### Tabla: Interview_vendors
 
 | **Field**    | **Type**    | **Null** | **Key** | **Default** | **Extra**      |
-+-------------+--------------+----------+---------+-------------+----------------+
+|-------------|--------------|----------|---------|-------------|----------------|
 | id          | int          | NO       | PRI     | NULL        | auto_increment |
 | id_location | int          | NO       | MUL     | NULL        |                |
 | link        | varchar(500) | NO       |         | NULL        |                |
@@ -218,6 +218,7 @@ Una vez que la aplicación esté en funcionamiento, puedes interactuar con la AP
 - `GET /images/<id>`: Obtiene información de un sitio específico.
 - `PUT /images/<id>`: Actualiza información de un sitio.
 ---
+Los queries para las demas tablas pueden ser inferidos a partir de las inferencias anteriores.
 
 ## Contacto
 
